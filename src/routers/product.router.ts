@@ -6,5 +6,4 @@ const productRouter = Router();
 
 productRouter.post('/', productValidate, productController.createProduct);
 
-
 export default productRouter;
