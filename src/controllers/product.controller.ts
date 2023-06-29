@@ -8,6 +8,4 @@ async function createProduct(req: Request, res: Response): Promise<Response> {
   return res.status(201).json(product.data);
 }
 
-
-
 export default { createProduct };
