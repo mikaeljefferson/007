@@ -1,5 +1,5 @@
 import ProductModel, {
-  ProductInputtableTypes, ProductSequelizeModel } from '../database/models/product.model';
+  ProductInputtableTypes } from '../database/models/product.model';
 import { ServiceResponse } from '../types/ServiceResponse';
 
 async function createProduct(
@@ -12,7 +12,6 @@ async function createProduct(
     data: result.dataValues };
   return responseService;
 }
-
 
 export default {
   createProduct,

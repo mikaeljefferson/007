@@ -10,5 +10,4 @@ async function createProduct(req: Request, res: Response): Promise<Response> {
 
 
 
-
 export default { createProduct };
