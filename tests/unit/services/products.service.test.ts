@@ -22,4 +22,22 @@ describe('ProductsService', function () {
       expect(result.data).to.deep.eq(mockProduct)
     })
   })
+  it('  retorna uma lista de todos produtos com sucesso ', async function () {
+    const productMockModel = [ProductModel.build({
+      id: 8,
+      name: "Martelo de Thor",
+      price: "30 peças de ouro",
+      orderId: 4,
+    })];
+   
+    sinon.stub(ProductModel, 'findAll').resolves(productMockModel);
+    const products = {
+      id: 8,
+      name: "Martelo de Thor",
+      price: "30 peças de ouro",
+      orderId: 4,
+    };
+    const result = await productService.findAll();
+    expect(result.status).to.eq('SUCCESSFUL');
+  })
 });

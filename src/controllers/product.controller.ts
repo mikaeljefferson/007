@@ -8,4 +8,12 @@ async function createProduct(req: Request, res: Response): Promise<Response> {
   return res.status(201).json(product.data);
 }
 
-export default { createProduct };
+async function findAll(req: Request, res: Response): Promise<Response> {
+  const serviceResponse = await productService.findAll();
+  return res.status(200).json(serviceResponse.data);
+}
+
+  export default {
+    createProduct,
+    findAll,
+  };

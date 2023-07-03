@@ -5,5 +5,6 @@ import productValidate from '../middlewares/productValidate';
 const productRouter = Router();
 
 productRouter.post('/', productValidate, productController.createProduct);
+productRouter.get('/', productController.findAll);
 
 export default productRouter;
