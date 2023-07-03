@@ -13,7 +13,7 @@ async function findAll(req: Request, res: Response): Promise<Response> {
   return res.status(200).json(serviceResponse.data);
 }
 
-  export default {
-    createProduct,
-    findAll,
-  };
+export default {
+  createProduct,
+  findAll,
+};
